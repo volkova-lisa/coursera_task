@@ -4,39 +4,23 @@
               android:layout_height="match_parent"
               android:orientation="horizontal">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivPhoto"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="16dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/e_mail"/>
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_view_page2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView2"/>
+            <Button
+                android:id="@+id/button_page2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"/>
 
-        <TextView
-            android:id="@+id/tvEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/password"/>
 
-        <TextView
-            android:id="@+id/tvPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
 
 </LinearLayout>

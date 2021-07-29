@@ -1,36 +1,34 @@
 package quizapp.volkova.coursera_project;
 
-import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AuthActivity extends AppCompatActivity {
+public class FirstActivity extends AppCompatActivity {
 
     private EditText loginField;
     private EditText passField;
-    private Button loginButton;
+    private Button button;
     private Button regButton;
 
     private View.OnClickListener logButtonClick = v -> {
-        //todo log in
-        if (!isEmptyText()) {
-            //print text in toast
-            showToast(loginField.getText().toString());
-        }
-        else {}
+        //does: text toast + open second page
+
+        //print text in toast
+        showToast(loginField.getText().toString());
+
+        Intent startSecondActivityIntent = new Intent(FirstActivity.this, SecondActivity.class);
+        startSecondActivityIntent.putExtra(SecondFragment.USER_KEY, loginField.getText().toString());
+        startActivity(startSecondActivityIntent);
+
     };
 
-    private View.OnClickListener regButtonClick = v -> {
-        //todo register
-    };
 
     private boolean isEmptyText() {
        return TextUtils.isEmpty(loginField.getText());
@@ -49,9 +47,9 @@ public class AuthActivity extends AppCompatActivity {
         setContentView(R.layout.ac_auth);
 
         loginField = findViewById(R.id.etLogin);
-        loginButton= findViewById(R.id.logButton);
+        button = findViewById(R.id.button_page1);
 
-        loginButton.setOnClickListener(logButtonClick);
+        button.setOnClickListener(logButtonClick);
     }
 
 

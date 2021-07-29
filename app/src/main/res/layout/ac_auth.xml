@@ -9,15 +9,16 @@
         android:id="@+id/etLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/login"
+        android:hint="Some text"
         android:layout_marginLeft="9dp"
         android:layout_marginRight="9dp"/>
 
                <Button
-                android:id="@+id/logButton"
-                android:text="@string/login"
+                android:id="@+id/button_page1"
+                android:text="button1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"/>
 
 
 </LinearLayout>
