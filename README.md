@@ -1,3 +1,4 @@
 # coursera_task
-TASK 1/3 
+3 TASKS
   -working with Activities, bundle,Intents, Toasts etc
+  
