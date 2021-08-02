@@ -1,5 +1,7 @@
 package quizapp.volkova.coursera_project;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -7,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,13 +25,10 @@ public class SecondFragment extends Fragment {
     public static String USER_KEY = "bundle_key";
     //public static String PASS_KEY = "PASS_KEY";
 
-    private AppCompatImageView mPhoto;
     private TextView mLogin;
-    private TextView mPassword;
+    private final String url = "https://www.google.ru/search?q=";
+    private Button searchButton;
 
-    private View.OnClickListener mOnPhotoClickListener = v -> {
-
-    };
 
     public static SecondFragment newInstance() {
         Bundle args = new Bundle();
@@ -37,8 +37,14 @@ public class SecondFragment extends Fragment {
         return fragment;
     }
 
+    private View.OnClickListener searchBOCL = v -> {
+        googleSearch();
+    } ;
 
-
+    private void googleSearch() {
+        Intent intent =  new Intent(Intent.ACTION_VIEW, Uri.parse(url + USER_KEY.toString()));
+        startActivity(intent);
+    }
 
     @Nullable
     @Override
@@ -46,6 +52,9 @@ public class SecondFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.ac_profile, container, false);
         mLogin = v.findViewById(R.id.text_view_page2);
+        searchButton = v.findViewById(R.id.button_page2);
+
+        searchButton.setOnClickListener(searchBOCL);
 
         Bundle bundle = getActivity().getIntent().getExtras();
         mLogin.setText(bundle.getString(SecondFragment.USER_KEY));
