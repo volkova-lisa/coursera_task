@@ -44,7 +44,7 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ac_auth);
+        setContentView(R.layout.start_fragment);
 
         loginField = findViewById(R.id.etLogin);
         button = findViewById(R.id.button_page1);

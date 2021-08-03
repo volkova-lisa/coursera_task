@@ -13,12 +13,12 @@
         android:layout_marginLeft="9dp"
         android:layout_marginRight="9dp"/>
 
-               <Button
-                android:id="@+id/button_page1"
-                android:text="button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="9dp"/>
+    <Button
+        android:id="@+id/button_page1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:text="Search" />
 
 
 </LinearLayout>
